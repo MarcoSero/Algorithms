@@ -36,7 +36,7 @@ struct Algorithms {
     if a.count <= 1 {
       return a
     }
-    return Utilities.merge(a.split.0, a.split.1)
+    return Utilities.merge(mergesort(a.split.0), mergesort(a.split.1))
   }
   
   static func quicksort<T: Comparable>(a: Array<T>) -> Array<T> {
