@@ -48,3 +48,11 @@ This is not great:
 ## Tests
 
 I used [Quick](https://github.com/modocache/Quick) as testing framework.
+
+## Contact
+
+Marco Sero
+
+- http://www.marcosero.com
+- http://twitter.com/marcosero 
+- marco@marcosero.com
