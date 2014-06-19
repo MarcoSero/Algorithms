@@ -4,11 +4,11 @@ Small collection of simple algorithms written in Swift.
 
 ## Purpose
 
-Trying to get used of new Swift's syntax and constructs, whilst brushing up my functional programming and algorithms.
+Getting used to the new Swift's syntax and at the same time brushing up my functional programming and algorithms.
 
 ## Notes
 
-I tried to keep the syntax clean. I took some inspiration from Haskell's ":" (column) operator redefining a similar one to concatenate arrays:
+I tried to keep the syntax clean. I took some inspiration from Haskell's ":" (colon) operator redefining a similar one to concatenate arrays:
 
     operator infix ++ { associativity left precedence 140 }
     func ++ <T>(left: Array<T>, right: Array<T>) -> Array<T> {
@@ -28,7 +28,7 @@ With this operator a **almost-one-liner** quicksort is possible
 
 I said almost :)
 
-I also tried to use the Swift's new `switch - where` construct to mimic Haskell's pattern matching. I must say I would really love to get a similar pattern matching in Swift.  
+I also tried to use the Swift's new `switch - where` construct to mimic Haskell's pattern matching. I must say I would really love to get more powerful and Haskell-like pattern matching in Swift.  
 This is not great:
 
     switch (array, value) {
