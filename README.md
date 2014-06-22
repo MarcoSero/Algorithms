@@ -44,6 +44,25 @@ This is not great:
       return true
     }
 
+*UPDATE*: thanks to the [`~=` operator](https://developer.apple.com/library/prerelease/ios/documentation/swift/conceptual/swift_programming_language/Patterns.html#//apple_ref/doc/uid/TP40014097-CH36-XID_909), it's possible to extend Swift's pattern matching to a new level of awesomeness!
+
+    func ~= <T: Comparable>(left: Array<T>, right: Array<T>) -> Bool {
+      return left == right
+    }
+    
+    // now this becomes reality
+    switch (array, value) {
+    case ([], _):
+      return false
+    case ([value], _):
+      return true
+    case let (a, x) where x < a[i]:
+      return binarySearch(a.split.0, value: x)
+    case let (a, x) where x > a[i]:
+      return binarySearch(a.split.1.tail, value: x)
+    default:
+      return true
+    }
 
 ## Tests
 

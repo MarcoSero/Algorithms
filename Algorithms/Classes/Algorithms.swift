@@ -12,10 +12,10 @@ struct Algorithms {
   static func binarySearch<T: Comparable>(array: Array<T>, value: T) -> Bool {
     let i = Int(array.count / 2)
     switch (array, value) {
-    case let (a, x) where a.isEmpty:
+    case ([], _):
       return false
-    case let (a, x) where a.count == 1:
-      return a.head! == x
+    case ([value], _):
+      return true
     case let (a, x) where x < a[i]:
       return binarySearch(a.split.0, value: x)
     case let (a, x) where x > a[i]:

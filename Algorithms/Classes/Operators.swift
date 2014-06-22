@@ -12,3 +12,7 @@ func ++ <T>(left: Array<T>, right: Array<T>) -> Array<T> {
   a += right
   return a
 }
+
+func ~= <T: Comparable>(left: Array<T>, right: Array<T>) -> Bool {
+  return left == right
+}
