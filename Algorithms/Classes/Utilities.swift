@@ -10,9 +10,9 @@ struct Utilities {
   
   static func insertOrd<T: Comparable>(array: Array<T>, _ value: T) -> Array<T> {
     if array.isEmpty || value < array.head {
-      return [value] ++ array
+      return value ++ array
     }
-    return [array.head!] ++ insertOrd(array.tail, value)
+    return array.head! ++ insertOrd(array.tail, value)
   }
   
   static func merge<T: Comparable>(arrayA: Array<T>, _ arrayB: Array<T>) -> Array<T> {
@@ -20,10 +20,10 @@ struct Utilities {
       return arrayA ++ arrayB
     }
     if arrayA.head! < arrayB.head! {
-      return [arrayA.head!] ++ merge(arrayA.tail, arrayB)
+      return arrayA.head! ++ merge(arrayA.tail, arrayB)
     }
     else {
-      return [arrayB.head!] ++ merge(arrayA, arrayB.tail)
+      return arrayB.head! ++ merge(arrayA, arrayB.tail)
     }
   }
   

@@ -41,7 +41,7 @@ struct Algorithms {
   
   static func quicksort<T: Comparable>(a: Array<T>) -> Array<T> {
     if let x = a.head {
-      return quicksort(a.tail.filter{ $0 < x } ) ++ [x] ++ quicksort(a.tail.filter { $0 >= x })
+      return quicksort(a.tail.filter{ $0 < x } ) ++ x ++ quicksort(a.tail.filter { $0 >= x })
     }
     return []
   }
