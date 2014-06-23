@@ -14,7 +14,7 @@ class SearchAlgorithmsSpec: QuickSpec {
   override func spec() {
     describe("search algorithms") {
       
-      var sortedArray: Array<Int>?
+      var sortedArray: Int[]?
       
       context("when the array is not empty") {
         

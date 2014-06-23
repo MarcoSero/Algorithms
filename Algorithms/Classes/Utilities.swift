@@ -8,14 +8,14 @@
 
 struct Utilities {
   
-  static func insertOrd<T: Comparable>(array: Array<T>, _ value: T) -> Array<T> {
+  static func insertOrd<T: Comparable>(array: T[], _ value: T) -> T[] {
     if array.isEmpty || value < array.head {
       return value ++ array
     }
     return array.head! ++ insertOrd(array.tail, value)
   }
   
-  static func merge<T: Comparable>(arrayA: Array<T>, _ arrayB: Array<T>) -> Array<T> {
+  static func merge<T: Comparable>(arrayA: T[], _ arrayB: T[]) -> T[] {
     if arrayA.isEmpty || arrayB.isEmpty {
       return arrayA ++ arrayB
     }

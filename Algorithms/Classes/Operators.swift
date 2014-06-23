@@ -9,21 +9,21 @@
 /// array concatenation
 operator infix ++ { associativity left precedence 140 }
 
-func ++ <T>(left: Array<T>, right: Array<T>) -> Array<T> {
+func ++ <T>(left: T[], right: T[]) -> T[] {
   var a = Array<T>(left)
   a += right
   return a
 }
 
-func ++ <T>(left: T, right: Array<T>) -> Array<T> {
+func ++ <T>(left: T, right: T[]) -> T[] {
   return [left] ++ right
 }
 
-func ++ <T>(left: Array<T>, right: T) -> Array<T> {
+func ++ <T>(left: T[], right: T) -> T[] {
   return left ++ [right]
 }
 
 /// array pattern matching
-func ~= <T: Comparable>(left: Array<T>, right: Array<T>) -> Bool {
+func ~= <T: Comparable>(left: T[], right: T[]) -> Bool {
   return left == right
 }
