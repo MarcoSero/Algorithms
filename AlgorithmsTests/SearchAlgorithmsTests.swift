@@ -22,12 +22,12 @@ class SearchAlgorithmsSpec: QuickSpec {
           sortedArray = [0,1,2,3,4,5,6,7,8,9,10]
         }
         
-        it("an existing value can be searched and found with binarysearch") {
+        it("should find an existing value with binarysearch") {
           let valueExists = Algorithms.binarySearch(sortedArray!, value: 2)
           expect(valueExists).to.beTrue()
         }
         
-        it("a non existing value can't be found with binarysearch") {
+        it("should not find a non existing value with binarysearch") {
           let valueExists = Algorithms.binarySearch(sortedArray!, value: 3234)
           expect(valueExists).to.beFalse()
         }
@@ -40,7 +40,7 @@ class SearchAlgorithmsSpec: QuickSpec {
           sortedArray = []
         }
         
-        it("no values can be found with binarysearch") {
+        it("should not find any values with binarysearch") {
           let valueExists = Algorithms.binarySearch(sortedArray!, value: 1)
           expect(valueExists).to.beFalse()
         }

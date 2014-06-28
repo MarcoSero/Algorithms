@@ -5,7 +5,7 @@
 //  Created by Marco Sero on 14/06/14.
 //  Copyright (c) 2014 Marco Sero. All rights reserved.
 //
-
+import Swiftener
 
 struct Algorithms {
   
@@ -14,12 +14,10 @@ struct Algorithms {
     switch (array, value) {
     case ([], _):
       return false
-    case ([value], _):
-      return true
     case let (a, x) where x < a[i]:
       return binarySearch(a.split.0, value: x)
     case let (a, x) where x > a[i]:
-      return binarySearch(a.split.1.tail, value: x)
+      return binarySearch(a.split.1, value: x)
     default:
       return true
     }

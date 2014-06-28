@@ -1,3 +1,6 @@
 [submodule "Libraries/Quick"]
 	path = Libraries/Quick
 	url = git@github.com:modocache/Quick.git
+[submodule "Libraries/Swiftener"]
+	path = Libraries/Swiftener
+	url = git@github.com:MarcoSero/Swiftener.git

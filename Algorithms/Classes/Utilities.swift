@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Marco Sero. All rights reserved.
 //
 
+import Swiftener
+
 struct Utilities {
   
   static func insertOrd<T: Comparable>(array: T[], _ value: T) -> T[] {
