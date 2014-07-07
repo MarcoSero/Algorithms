@@ -14,8 +14,8 @@ class SortingAlgorithmsSpec: QuickSpec {
   override func spec() {
     describe("sorting algorithms") {
 
-      var unsortedArray: Int[]?
-      var sortedArray: Int[]?
+      var unsortedArray: [Int]?
+      var sortedArray: [Int]?
       
       context("when the array is not empty and not ordered") {
         
